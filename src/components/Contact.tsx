@@ -39,7 +39,7 @@ export default function Contact() {
             </motion.p>
 
             <div className="flex gap-4">
-              <SocialIcon icon={<Github />} href="https://github.com/ShubhCoding13" />
+              <SocialIcon icon={<Github />} href="https://github.com/Shubhiii92" />
               <SocialIcon icon={<Linkedin />} href="https://www.linkedin.com/in/shubham-patel-863ab6327/" />
               <SocialIcon icon={<Twitter />} href="#" />
               <SocialIcon icon={<Instagram />} href="#" />
