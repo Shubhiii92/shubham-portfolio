@@ -11,34 +11,43 @@ export default function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="text-xl font-medium text-gray-400 mb-2">
-            Hey, I am <span className="text-accent">Shubham</span>
+          <h2 className="text-xl font-medium text-gray-300 mb-3 flex items-center gap-2">
+            <span>Hi, I'm</span> <span className="text-accent font-bold">Shubham Patel</span>
           </h2>
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-6">
-            Web developer <span className="text-accent">&</span> Leader
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
+            Computer Engineering Student <span className="text-accent">|</span> <span className="text-accent">Cybersecurity</span> • <span className="text-accent">Cloud</span> • <span className="text-accent">DevSecOps</span>
           </h1>
-          <p className="text-lg text-gray-400 max-w-lg mb-10 leading-relaxed">
-            Computer Science Engineering student with strong fundamentals in data structures, backend development, and software engineering principles. Seeking an entry-level Software Engineer role to build scalable solutions.
+          <p className="text-base sm:text-lg text-gray-400 max-w-xl mb-10 leading-relaxed">
+            Third-year Computer Engineering student building practical projects across cybersecurity, cloud and software engineering.
           </p>
           
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <motion.a
-              href="#contact"
+              href="#projects"
               whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255, 106, 0, 0.4)" }}
               whileTap={{ scale: 0.95 }}
-              className="orange-gradient px-8 py-4 rounded-full font-bold text-white shadow-lg"
+              className="orange-gradient px-7 py-3.5 rounded-full font-bold text-white shadow-lg text-sm"
             >
-              Hire me
+              View Projects
             </motion.a>
             <motion.a
               href={`${import.meta.env.BASE_URL}resume.pdf`}
               download="Shubham_Patel_Resume.pdf"
+              whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
+              whileTap={{ scale: 0.95 }}
+              className="glass px-7 py-3.5 rounded-full font-bold text-white flex items-center gap-2 border border-white/10 text-sm"
+            >
+              <Download className="w-4 h-4 text-accent" />
+              <span>Download Resume</span>
+            </motion.a>
+            <motion.a
+              href="#contact"
               whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
               whileTap={{ scale: 0.95 }}
-              className="glass px-8 py-4 rounded-full font-bold text-white flex items-center gap-2"
+              className="glass px-7 py-3.5 rounded-full font-semibold text-gray-300 hover:text-white flex items-center gap-2 border border-white/5 text-sm"
             >
-              <Download className="w-5 h-5" />
-              <span>Resume</span>
+              <Mail className="w-4 h-4 text-accent" />
+              <span>Contact Me</span>
             </motion.a>
           </div>
         </motion.div>
@@ -106,28 +115,27 @@ export default function Hero() {
               delay={2}
             />
 
-            {/* Testimonial Card - Moved to Right with Liquid Glass Effect */}
+            {/* Focus Card - Real Student Information */}
             <motion.div
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.8 }}
-              className="absolute -bottom-10 -right-20 md:-right-32 glass p-6 rounded-[32px] max-w-[280px] z-30 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] backdrop-blur-2xl border border-white/20 bg-white/10 group"
+              className="absolute -bottom-10 -right-10 md:-right-24 glass p-5 rounded-[28px] max-w-[280px] z-30 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] backdrop-blur-2xl border border-white/15 bg-white/10 group"
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent-glow opacity-50" />
-              <p className="text-xs text-gray-200 italic mb-4 leading-relaxed font-medium">
-                "Shubham's ability to blend futuristic aesthetics with clean code is truly exceptional. Highly recommended!"
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent-glow opacity-60 rounded-t-full" />
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
+                <span className="text-[11px] font-bold text-accent uppercase tracking-wider">Current Focus</span>
+              </div>
+              <p className="text-xs text-gray-200 mb-3 leading-relaxed font-medium">
+                Cybersecurity, Cloud Architecture, DevSecOps & Practical Project Building
               </p>
-              <div className="flex items-center gap-3">
-                <img
-                  src="https://picsum.photos/seed/caroline/100/100"
-                  alt="Caroline Abbott"
-                  className="w-8 h-8 rounded-full object-cover border border-white/20"
-                  referrerPolicy="no-referrer"
-                />
+              <div className="pt-2 border-t border-white/10 flex items-center justify-between">
                 <div>
-                  <h4 className="text-xs font-bold text-white">Caroline Abbott</h4>
-                  <p className="text-[10px] text-gray-400">Business Owner</p>
+                  <h4 className="text-xs font-bold text-white">VIT, Mumbai</h4>
+                  <p className="text-[10px] text-gray-400">Third Year · Batch 2024–2028</p>
                 </div>
+                <span className="text-sm">🛡️</span>
               </div>
             </motion.div>
           </div>
